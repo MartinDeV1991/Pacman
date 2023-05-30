@@ -1,0 +1,1 @@
+const highscores = [5,200,40,50,345];
