@@ -7,31 +7,8 @@ const highscore = document.querySelector('#highscore')
 
 const gameOver = document.querySelector('#gameOver')
 
-
-// const data = "console.log('Hello, world!');";
-// const filename = "./example.js";
-
-// // Create a new Blob object with the data and set the MIME type
-// const blob = new Blob([data], {type: "application/javascript"});
-
-// // Create a URL object and set the href attribute to the object URL
-// const url = URL.createObjectURL(blob);
-
-// // Create a new <a> element and set the href and download attributes
-// const link = document.createElement("a");
-// link.href = url;
-// link.download = filename;
-
-// // Simulate a click on the link to trigger the download
-// link.click();
-
-// // Revoke the object URL to free up memory
-// URL.revokeObjectURL(url);
-
-
-
-canvas.width = innerWidth
-canvas.height = innerHeight
+canvas.width = 500;
+canvas.height = 800;
 
 let pellets = []
 let boundaries = []

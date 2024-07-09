@@ -43,11 +43,11 @@ class Player {
         if (lost != true) {
             this.position.x += this.velocity.x
             this.position.y += this.velocity.y
-            
+
             if (this.radians < 0 || this.radians > 0.75) this.openRate = -this.openRate
 
             this.radians += this.openRate
-        } else {this.alpha -= 0.005}
+        } else { this.alpha -= 0.005 }
     }
 }
 
@@ -112,20 +112,14 @@ class Ghost {
         }
 
         if (this.scared) {
-        c.drawImage(this.image,
-            this.cropWidth * 2 + this.spriteRow * this.cropWidth, 0 * this.cropHeight * 2 + this.spriteCol * this.cropHeight, this.cropHeight, this.cropWidth,
-            this.position.x - 15, this.position.y - 15, this.radius * 2, this.radius * 2)
+            c.drawImage(this.image,
+                this.cropWidth * 2 + this.spriteRow * this.cropWidth + 3, 0 * this.cropHeight * 2 + this.spriteCol * this.cropHeight, this.cropHeight, this.cropWidth,
+                this.position.x - 15, this.position.y - 15, this.radius * 2, this.radius * 2)
         } else {
-        c.drawImage(this.image,
-            this.spriteColorOffsetX + this.spriteRow * this.cropWidth, this.spriteColorOffsetY + this.spriteCol * this.cropHeight, this.cropHeight, this.cropWidth,
-            this.position.x - 15, this.position.y - 15, this.radius * 2, this.radius * 2)
+            c.drawImage(this.image,
+                this.spriteColorOffsetX + this.spriteRow * this.cropWidth, this.spriteColorOffsetY + this.spriteCol * this.cropHeight, this.cropHeight, this.cropWidth,
+                this.position.x - 15, this.position.y - 15, this.radius * 2, this.radius * 2)
         }
-
-        // c.beginPath()
-        // c.arc(this.position.x, this.position.y, this.radius, 0, 2 * Math.PI)
-        // c.fillStyle = this.scared ? 'blue' : this.color
-        // c.fill()
-        // c.closePath()
     }
 
     update() {
